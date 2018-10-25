@@ -26,4 +26,3 @@ list = []
 selectNames(list)
 list.sort()
 afficherList(list)
-

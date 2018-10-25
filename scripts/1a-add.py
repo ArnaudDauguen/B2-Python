@@ -5,7 +5,11 @@
 #Arnaud Dauguen
 
 
-#fonctions
+# I M P O R T
+import re
+
+
+# F O N C T I O N
 def add(op1, op2):
   return op1 + op2
 
@@ -16,15 +20,12 @@ def checkedInputNumber(patern):
     nb = input('type a CORRECT number : ')
   return int(nb)
 
-#variables
-#regex
-import re
+# V A R I A B L E
+#regex pour detecter les nombres
 patern = re.compile('^[0-9]+$')
 
 nombreA = checkedInputNumber(patern)
 nombreB = checkedInputNumber(patern)
 
 
-
-total = add(nombreA, nombreB)
-print(total)
+print(add(nombreA, nombreB))

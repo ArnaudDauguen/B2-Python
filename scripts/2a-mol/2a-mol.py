@@ -5,6 +5,10 @@
 #Arnaud Dauguen
 
 
+# I M P O R T
+from random import randint
+
+
 # F O N C T I O N S
 #Ecriture
 def writeInFile(to_write):
@@ -40,8 +44,6 @@ def checkNumber():
 
 
 # V A R I A B L E S
-from random import randint
-
 path_file = '2a.txt'
 
 

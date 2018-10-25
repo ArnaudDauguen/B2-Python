@@ -5,6 +5,10 @@
 #Arnaud Dauguen
 
 
+# I M P O R T
+import operator
+
+
 # F O N C T I O N S
 
 def selectNotes(dict):
@@ -50,7 +54,6 @@ def calculerMoyenne(total, nb):
   return(total / nb)  
 
 # V A R I A B L E S
-import operator
 dict = {}
 
 selectNotes(dict)
