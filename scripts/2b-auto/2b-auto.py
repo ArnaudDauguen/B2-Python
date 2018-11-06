@@ -1,7 +1,7 @@
 #!/usr/bin/python36
 #plus ou mois
 #plus ou moins par fichier
-#25/10
+#06/11
 #Arnaud Dauguen
 
 
