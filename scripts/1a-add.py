@@ -13,6 +13,7 @@ import re
 def add(op1, op2):
   return op1 + op2
 
+
 # fonction d'input, check number integre
 def checkedInputNumber(patern):
   nb = input('type a number : ')
@@ -20,9 +21,11 @@ def checkedInputNumber(patern):
     nb = input('type a CORRECT number : ')
   return int(nb)
 
+
 # V A R I A B L E
 # regex pour detecter les nombres
 patern = re.compile('^[0-9]+$')
+
 
 nombreA = checkedInputNumber(patern)
 nombreB = checkedInputNumber(patern)

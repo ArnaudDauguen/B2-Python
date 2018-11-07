@@ -17,12 +17,14 @@ def writeInFile(to_write):
   file.write(to_write)
   file.close()
 
+
 # Lecture
 def readInFile():
   file = open(path_file, "r")
   input = file.readline().strip()
   file.close()
   return input
+
 
 # fct de check d'input d'un nombre
 def inputNumber():
@@ -31,6 +33,7 @@ def inputNumber():
   while(number.isdigit() == False):
     number = readInFile()
   return int(number)
+
 
 # fct qui return plus ou moins
 def checkNumber():
@@ -41,6 +44,7 @@ def checkNumber():
     return 'trop petit'
   else:
     return 'trop grand'
+
 
 # fct du ragequit CTRL+C
 def ragequit(sig, frame):
@@ -60,8 +64,10 @@ done = False
 to_found = randint(1, 100)
 trying = -1
 
+
 # pour indiquer le début de la partie
 writeInFile('Bonjour, trouvez le nombre compris entre 1 et 100')
+
 
 while (done is False and trying != to_found):
   trying = inputNumber()

@@ -17,9 +17,11 @@ def writeInFile(to_write):
   file.write(to_write)
   file.close()
 
+
 # fct d'input d'un nombre
 def getNewNumber(min, max):
   return int((max + min)  / 2)
+
 
 # fct qui return plus ou moins
 def checkNumber():
@@ -29,6 +31,7 @@ def checkNumber():
     return 'trop petit'
   else:
     return 'trop grand'
+
 
 # fct du ragequit CTRL+C
 def ragequit(sig, frame):
@@ -57,12 +60,8 @@ while (resultat != 'gagné' and trying != to_found):
     min = trying
   elif(resultat == 'trop grand'):
     max = trying
-
-  print(trying)
-  print(resultat)
-  print(min)
-  print(max)
   nbCoups += 1
+
 
 # pour indiquer la fin de la partie
 writeInFile('Le bot a trouvé en ' + str(nbCoups) + ' coups')

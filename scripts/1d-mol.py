@@ -18,6 +18,7 @@ def inputNumber():
       goodbye()
   return int(number)
 
+
 # fct qui return plus ou moins
 def checkNumber(to_found, trying):
   if (to_found == trying):
@@ -28,20 +29,22 @@ def checkNumber(to_found, trying):
   else:
     return "trop grand"
 
+
 # fct d'au revoir
 def goodbye():
   print('La solution était : ' + str(to_found) + '. Au revoir')
   exit()
 
+
 # check ragequit CTRL + C
 def quitting(sig, frame):
   goodbye()
+
 
 # V A R I A B L E S
 from random import randint
 import signal
 from time import sleep
-
 
 
 done = False
@@ -51,6 +54,7 @@ trying = -1
 
 while (done == False and trying != to_found):
   signal.signal(signal.SIGINT, quitting)
+
 
   trying = inputNumber()
   print(checkNumber(to_found, trying))

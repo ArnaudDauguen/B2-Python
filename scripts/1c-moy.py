@@ -10,7 +10,6 @@ import operator
 
 
 # F O N C T I O N S
-
 def selectNotes(dict):
   new_name = ' '
   new_note = 0
@@ -25,24 +24,23 @@ def selectNotes(dict):
 # fct de check d'input d'un nombre
 def inputNote():
   note = input('type a number : ')
-
   # si c'est pas un nombre on recemmance
   while(note.isdigit() == False):
     note = input('type a true number : ')
   return int(note)
 
+
 # affichage du top 5 et de la moyenne
 def output(dict):
   nb_eleve = 0
   total_notes = 0
-
   # parcours des objet
   for name, note in dict.items():
     nb_eleve = nb_eleve + 1
     total_notes = total_notes + note
-
   print('moyenne de la classe : ' + str(calculerMoyenne(total_notes, nb_eleve)))
   print('le TOP 5 des notes')
+
   
   # trie du dico avec le second parametre, la note
   # reversed pour avoir en décroissant
@@ -53,8 +51,10 @@ def output(dict):
 def calculerMoyenne(total, nb):
   return(total / nb)  
 
+
 # V A R I A B L E S
 dict = {}
+
 
 selectNotes(dict)
 output(dict)

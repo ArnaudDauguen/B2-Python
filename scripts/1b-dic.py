@@ -14,6 +14,7 @@ def selectNames(list):
     new_name = input('selectionnez un nom : ')
   return list
 
+
 def afficherList(list):
   for name in list:
     print(name)

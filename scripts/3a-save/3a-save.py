@@ -16,9 +16,11 @@ import filecmp
 import signal
 import sys
 
+
 # F O N C T I O N S
 def saveDirectory(to_save, archive_name):
   make_archive(archive_name, 'gztar', to_save)
+
 
 def checkExistingArchive():
   if (os.path.exists(full_archive_path)):
@@ -26,8 +28,10 @@ def checkExistingArchive():
   else:
     return False
 
+
 def moveArchiveTo(archive_file, backup_direcoty):
   shutil.move(archive_file, backup_directory)
+
 
 def checkMoveFile():
   if checkExistingArchive() == True:
@@ -41,20 +45,15 @@ def checkMoveFile():
     moveArchiveTo(archive_file, backup_directory)
     
 
-
-
 # fct du ragequit CTRL+C
 def ragequit(sig, frame):
   sys.stdout.write('-_______- \n')
   exit()
 
 
-
 # I N T E R U P T
 signal.signal(signal.SIGINT, ragequit)
-  
-  
-  
+
 
 # V A R I A B L E S
 to_save_path = '/root/B2-Python'
@@ -65,6 +64,7 @@ full_archive_path = backup_directory + archive_file
 
 
 # apelle des fonctions
+
 
 try:
   saveDirectory(to_save_path, archive_name)
