@@ -1,8 +1,8 @@
 #!/usr/bin/python36
-#plus ou mois
-#plus ou moins par fichier
-#06/11
-#Arnaud Dauguen
+# plus ou mois
+# plus ou moins par fichier
+# 06/11
+# Arnaud Dauguen
 
 
 # I M P O R T
@@ -11,17 +11,17 @@ import signal
 
 
 # F O N C T I O N S
-#Ecriture
+# Ecriture
 def writeInFile(to_write):
   file = open(path_file, "w")
   file.write(to_write)
   file.close()
 
-#fct d'input d'un nombre
+# fct d'input d'un nombre
 def getNewNumber(min, max):
   return int((max + min)  / 2)
 
-#fct qui return plus ou moins
+# fct qui return plus ou moins
 def checkNumber():
   if (to_found == trying):
     return 'gagné'
@@ -30,7 +30,7 @@ def checkNumber():
   else:
     return 'trop grand'
 
-#fct du ragequit CTRL+C
+# fct du ragequit CTRL+C
 def ragequit(sig, frame):
   writeInFile('\n Pas sympa le ragequit -____-')
   exit()
@@ -64,5 +64,5 @@ while (resultat != 'gagné' and trying != to_found):
   print(max)
   nbCoups += 1
 
-#pour indiquer la fin de la partie
+# pour indiquer la fin de la partie
 writeInFile('Le bot a trouvé en ' + str(nbCoups) + ' coups')

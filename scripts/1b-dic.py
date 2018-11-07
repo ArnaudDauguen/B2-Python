@@ -1,12 +1,12 @@
 #!/usr/bin/python36
-#1b-dic
-#input de noms et order
-#15/10
-#Arnaud Dauguen
+# 1b-dic
+# input de noms et order
+# 15/10
+# Arnaud Dauguen
 
 
 # F O N C T I O N S
-#input avec arret si q entré
+# input avec arret si q entré
 def selectNames(list):
   new_name = input('selectionnez un nom : ')
   while new_name != 'q':

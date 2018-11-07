@@ -1,8 +1,8 @@
 #!/usr/bin/python36
-#plus ou mois
-#plus ou moins par fichier
-#25/10
-#Arnaud Dauguen
+# plus ou mois
+# plus ou moins par fichier
+# 25/10
+# Arnaud Dauguen
 
 
 # I M P O R T
@@ -11,20 +11,20 @@ import signal
 
 
 # F O N C T I O N S
-#Ecriture
+# Ecriture
 def writeInFile(to_write):
   file = open(path_file, "w")
   file.write(to_write)
   file.close()
 
-#Lecture
+# Lecture
 def readInFile():
   file = open(path_file, "r")
   input = file.readline().strip()
   file.close()
   return input
 
-#fct de check d'input d'un nombre
+# fct de check d'input d'un nombre
 def inputNumber():
   number = readInFile()
   #si c'est pas un nombre on recommence
@@ -32,7 +32,7 @@ def inputNumber():
     number = readInFile()
   return int(number)
 
-#fct qui return plus ou moins
+# fct qui return plus ou moins
 def checkNumber():
   if (to_found == trying):
     done = True
@@ -42,7 +42,7 @@ def checkNumber():
   else:
     return 'trop grand'
 
-#fct du ragequit CTRL+C
+# fct du ragequit CTRL+C
 def ragequit(sig, frame):
   writeInFile('\n Pas sympa le ragequit -____-')
   exit()
@@ -60,10 +60,10 @@ done = False
 to_found = randint(1, 100)
 trying = -1
 
-#pour indiquer le début de la partie
+# pour indiquer le début de la partie
 writeInFile('Bonjour, trouvez le nombre compris entre 1 et 100')
 
-while (done == False and trying != to_found):
+while (done is False and trying != to_found):
   trying = inputNumber()
   resultat = checkNumber()
   writeInFile(resultat)

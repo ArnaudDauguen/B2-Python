@@ -1,24 +1,24 @@
 #!/usr/bin/python36
-#1d-moy
-#plus ou moins manuel
-#23/10
-#Arnaud Dauguen
+# 1d-moy
+# plus ou moins manuel
+# 23/10
+# Arnaud Dauguen
 
 
 # F O N C T I O N S
 
 
-#fct de check d'input d'un nombre
+# fct de check d'input d'un nombre
 def inputNumber():
   number = 'typeHere'
-  #si c'est pas un nombre on recommence
+  # si c'est pas un nombre on recommence
   while(number.isdigit() == False):
     number = input('type a true number : ')
     if(number == 'q'):
       goodbye()
   return int(number)
 
-#fct qui return plus ou moins
+# fct qui return plus ou moins
 def checkNumber(to_found, trying):
   if (to_found == trying):
     done = True
@@ -28,12 +28,12 @@ def checkNumber(to_found, trying):
   else:
     return "trop grand"
 
-#fct d'au revoir
+# fct d'au revoir
 def goodbye():
   print('La solution était : ' + str(to_found) + '. Au revoir')
   exit()
 
-#check ragequit CTRL + C
+# check ragequit CTRL + C
 def quitting(sig, frame):
   goodbye()
 

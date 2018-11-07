@@ -1,12 +1,12 @@
 #!/usr/bin/python36
-# 3a-save
-# faire des backpus de repertoire
+# 3b-save
+# faire des backpus de repertoire avec des propritéés au launch
 # 06/11
 # Arnaud Dauguen
 
 
 # C H E C K   M O D U L E S
-  #bash : declare -r _tar=$(which tar 2> /dev/null) || { echo 'tar binary not found, exiting.' ; exit 2 ; }
+  # bash : declare -r _tar=$(which tar 2> /dev/null) || { echo 'tar binary not found, exiting.' ; exit 2 ; }
 
 
 import shutil
@@ -72,5 +72,5 @@ try:
   sys.stdout.write('backup done, in ' + backup_directory + '\n')
 except Exception as e:
   sys.stderr.write('y a u 1 pb`\n')
-  sys.stderr.write(str(e) + '\n')
+  sys.stderr.write(e + '\n')
   pass
