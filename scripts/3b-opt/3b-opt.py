@@ -71,8 +71,8 @@ signal.signal(signal.SIGINT, ragequit)
 
 # A R G U M E N T S
 parser = argparse.ArgumentParser()
-parser.add_argument("-b", "--backupLocation", help="choose directory to store backup (relative path)")
-parser.add_argument("-d", "--directory", help="choose directories for backup, /!\ split with ',' (relative path)")
+parser.add_argument("-b", "--backupLocation", type=str, help="choose directory to store backup (relative path)")
+parser.add_argument("-d", "--directory", type=str, help="choose directories for backup, /!\ split with ',' (relative path)")
 args = parser.parse_args()
 
 
@@ -114,7 +114,8 @@ try:
   checkMoveFile()
   # delete tmp folder
   if args.directory:
-    shutil.rmtree(to_save_path)
+    if os.path.isdir(to_save_path):
+      shutil.rmtree(to_save_path)
 except Exception as e:
   sys.stderr.write('y a u 1 pb`\n')
   sys.stderr.write(str(e) + '\n')
